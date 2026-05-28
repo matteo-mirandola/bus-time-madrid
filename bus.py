@@ -19,6 +19,7 @@ import os
 import re
 import logging
 from datetime import datetime
+from dotenv import load_dotenv
 
 import requests
 from bs4 import BeautifulSoup
@@ -30,9 +31,8 @@ from telegram.ext import (
 )
 
 # ─── CONFIGURATION ────────────────────────────────────────────────────────────
-
-BOT_TOKEN = os.getenv("TELEGRAM_BOT_TOKEN", "8886414388:AAERWzv3Su_Y88ZCJ_VWuagIHH0zlSd5C8s")
-
+load_dotenv()
+BOT_TOKEN = os.getenv("TELEGRAM_BOT_TOKEN", "il_tuo_token_qui")
 COMMANDS = {
     "morning":   {"parada": 793, "linea": 12, "label": "🌅 Morning  |  Stop 793"},
     "afternoon": {"parada": 784, "linea": 12, "label": "🌆 Afternoon  |  Stop 784"},
