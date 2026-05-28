@@ -2,17 +2,11 @@
 Bus Bot Telegram - EMT Madrid
 ==============================
 Commands:
-  /morning       → Stop 793, Line 12 (morning)
-  /afternoon     → Stop 784, Line 12 (afternoon)
+  /morning       → Stop 784, Line 12 (morning)
+  /afternoon     → Stop 793, Line 12 (afternoon)
   /time 793 12   → Custom stop and line
   /start         → Welcome message
   /help          → List commands
-
-Setup:
-  1. pip install python-telegram-bot requests beautifulsoup4
-  2. Create a bot with @BotFather on Telegram and copy the token
-  3. Set BOT_TOKEN below (or via environment variable)
-  4. python bus_bot.py
 """
 
 import os
@@ -34,8 +28,8 @@ from telegram.ext import (
 load_dotenv()
 BOT_TOKEN = os.getenv("TELEGRAM_BOT_TOKEN", "il_tuo_token_qui")
 COMMANDS = {
-    "morning":   {"parada": 793, "linea": 12, "label": "🌅 Morning  |  Stop 793"},
-    "afternoon": {"parada": 784, "linea": 12, "label": "🌆 Afternoon  |  Stop 784"},
+    "morning":   {"parada": 784, "linea": 12, "label": "🌅 Morning  |  Stop 793"},
+    "afternoon": {"parada": 793, "linea": 12, "label": "🌆 Afternoon  |  Stop 784"},
 }
 
 HEADERS = {
