@@ -142,8 +142,8 @@ async def cmd_start(update: Update, context: ContextTypes.DEFAULT_TYPE):
     text = (
         "👋 *Bus Bot EMT Madrid*\n\n"
         "Use these commands to check when your bus arrives:\n\n"
-        "🌅 /morning       → Stop 793, Line 12\n"
-        "🌆 /afternoon     → Stop 784, Line 12\n"
+        "🌅 /morning       → Stop 784, Line 12\n"
+        "🌆 /afternoon     → Stop 793, Line 12\n"
         "🔍 /time 793 12   → Custom stop and line\n"
         "❓ /help          → Show this message"
     )
